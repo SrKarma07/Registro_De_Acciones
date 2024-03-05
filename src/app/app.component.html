@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Acciones</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    height: 100%;
+    color: #fff;
+    background-color: #FFFBFB;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+<body>
+<div style="text-align: center">
+  <h1 class="text-center text-primary p-1">
+    <b>Bienvenido a tu Aplicación de Acciones</b>
+  </h1>
+  <img src="https://i.ibb.co/pjMnswK/Logo2.png">
+</div>
+<div class="container">
+  <button (click)="Listar()" class="btn btn-primary mx-auto text-light btn-md"><b>Visualizar Acciones</b></button>
+  <button (click)="Agregar()" class="btn btn-primary mx-auto text-light btn-md"><b>Agregar Acciones</b></button>
+</div>
+<hr>
+</body>
+</html>
+<router-outlet></router-outlet>

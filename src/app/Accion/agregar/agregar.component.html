@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Agregar Acciones</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    height: 100%;
+    color: #fff;
+    background-color: #FFFBFB;
+  }
+</style>
+<body class="d-flex flex-column " style="min-height: 50vh;">
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h1 class="text-center text-primary p-1">Agregar Acciones</h1>
+    </div>
+    <div class="card-body ">
+      <form action="" class="col-9 p-3 text-center mx-auto">
+        <div class="form-group">
+          <label for="" class="form-label text-dark">Nombre de Acción</label>
+          <input type="text" class="form-control" [(ngModel)]="accion.nombreAccion" name="nombreAccion" maxlength="4">
+        </div>
+        <div class="form-group">
+          <label for="" class="form-label text-dark">Fecha de Compra</label>
+          <input type="text" class="form-control" [(ngModel)]="accion.fechaCompra" name="fechaCompra">
+        </div>
+
+        <div class="form-group">
+          <label for="" class="form-label text-dark">Precio por Acción</label>
+          <input type="text" class="form-control" [(ngModel)]="accion.precioCompraAccion" name="precioCompraAccion">
+        </div>
+
+        <div class="form-group">
+          <label for="" class="form-label text-dark">Cantidad de Acciones</label>
+          <input type="text" class="form-control" [(ngModel)]="accion.cantidadAcciones" name="cantidadAcciones">
+        </div>
+
+        <button (click)="Guardar()" class="btn btn-success mx-auto text-light btn-md mt-3"><b>Agregar Acción</b>
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>
+<footer class="bg-primary text-white py-3 mt-auto">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center">
+          <h5>Averos David - Campaña Gary - Torres David</h5>
+          <p>&copy; 2024 Todos los derechos reservados</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

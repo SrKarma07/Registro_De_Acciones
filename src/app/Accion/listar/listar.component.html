@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Listar Acciones</title>
+  <style>
+    body {
+      margin: 0;
+      color: #fff;
+      background-color: #FFFBFB;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column " style="min-height: 585px ;">
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Acciones</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-light table-hover table-striped-columns text-center ">
+        <thead class="bg-primary">
+        <tr>
+          <th scope="col">id Acción</th>
+          <th scope="col">Nombre de la Acción</th>
+          <th scope="col">Fecha de la Compra</th>
+          <th scope="col">Precio de Compra por Acción</th>
+          <th scope="col">Cantidad de Acciones</th>
+          <th scope="col">Costo total de Compra</th>
+          <th scope="col">Porcentaje de Compra</th>
+          <th scope="col">Ganancia o perdida</th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let accion of acciones">
+          <td>{{accion.idAccion}}</td>
+          <td>{{accion.nombreAccion}}</td>
+          <td>{{accion.fechaCompra}}</td>
+          <td>{{accion.precioCompraAccion}}</td>
+          <td>{{accion.cantidadAcciones}}</td>
+          <td>{{accion.costoTotalCompra}}</td>
+          <td>{{accion.porcentajeCompra}}</td>
+          <td>{{accion.gananciaPerdida}}</td>
+          <td>
+            <button (click)="Editar(accion)" class="btn btn-small btn-warning"><i class="fas fa-pen-to-square"></i>
+            </button>
+            <button (click)="Eliminar(accion)" class="btn btn-small btn-danger"><i class="fas fa-delete-left"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<footer class="bg-primary text-white py-3 mt-auto">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center">
+          <h5>Averos David - Campaña Gary - Torres David</h5>
+          <p>&copy; 2024 Todos los derechos reservados</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
